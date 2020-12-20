@@ -4,4 +4,5 @@ import com.tutorial.learn.beans.User;
 
 public interface UserService {
     User getUserDetails(String username);
+    void createUser(User user);
 }

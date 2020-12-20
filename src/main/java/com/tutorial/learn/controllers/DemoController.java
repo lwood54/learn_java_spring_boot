@@ -24,7 +24,7 @@ public class DemoController {
 
     @PostMapping("/new-user")
     public User saveNewUser(@RequestBody User user) {
-        user.setName("changed name");
+        userService.createUser(user);
         return user;
     }
 
