@@ -11,13 +11,7 @@ public class DemoController {
     public DemoController(final UserService userService) {
         this.userService = userService;
     }
-
-    // test route
-    @GetMapping("/hello-world")
-    public String sayHello() {
-        return "Hello world";
-    }
-
+    
     @GetMapping("/user-details")
     public User getUserDetails(@RequestParam(name="username") String username) {
         return userService.getUserDetails(username);
